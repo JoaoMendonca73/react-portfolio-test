@@ -1,0 +1,101 @@
+.nav-container,
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.nav-container{
+  background-color: transparent;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: rgb(83, 83, 83);
+}
+
+.logo{
+  background-color: transparent;
+  gap: 1rem;
+}
+
+.react-icon{
+  display: flex;
+  justify-content: center;align-items: center;
+  font-size: 3rem;
+  color: rgb(138,180,248);
+}
+
+.logo img{
+  width: 100px;
+}
+
+ul{
+  width: 98%;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color:rgba(0, 0, 0, 0.829);
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: inset 0 0 400px rgb(0, 0, 0);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  gap: 2rem;
+  z-index: 10;
+}
+
+.navLinks{
+  font-size: 3rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+
+
+.navLinks::before{
+  content: '';
+  width: 100%;
+  height: 5px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(255, 255, 255);
+  transform: scale(0);
+  transition: transform .5s ease;
+}
+
+.navLinks:hover::before{
+  transform: scale(.5);
+  
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+
+.open-button,
+.close-button{
+  position: absolute;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.open-button{
+  color: white;
+}
+
+.close-button{
+  color: red;
+}
+
+.open{
+display: none;
+}
